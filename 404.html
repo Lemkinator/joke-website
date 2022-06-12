@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+          integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+          crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <title>Leonard Lemke</title>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<script>$.get("static/fragments/navbar.html", function (data) {
+    $("#nav-placeholder").replaceWith(data);
+});</script>
+
+<div class="main">
+    <div class="content__container">
+        <div class="content lError">
+            <h1>404</h1>
+            <br>
+            <img src="images/error.gif" alt="">
+            <br>
+            <p>Look like you're lost,</p>
+            <p>the page you are looking for not avaible!</p>
+            <br>
+            <button class="lButton" id="button-space-invaders"><a href="space-invaders">Fight for this page</a></button>
+            <button class="lButton" id="button-out-run"><a href="out-run">Take a car and search for this page</a></button>
+            <button class="lButton"><a href="./">Go to Home</a></button>
+        </div>
+    </div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script>$.get("static/fragments/footer.html", function (data) {
+    $("#footer-placeholder").replaceWith(data);
+});</script>
+</body>
+</html>

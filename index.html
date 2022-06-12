@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+          integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+          crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <title>Leonard Lemke</title>
+    <meta name="description" content="Leonard Lemke" />
+    <meta property="og:title" content="Leonard Lemke" />
+    <meta property="og:description" content="Leonard Lemke" />
+    <meta property="og:url" content="https://www.leonard-lemke.com/" />
+    <meta property="og:image" content="images/logo/Icon_transparent.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:video" content="https://www.youtube.com/embed/h-fGDLRG0-0" />
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<script>$.get("static/fragments/navbar.html", function (data) {
+    $("#nav-placeholder").replaceWith(data);
+});</script>
+
+<!-- home Section -->
+<div class="home">
+    <div class="grid__container">
+        <div class="grid__content">
+            <h1>LEONARD LEMKE</h1>
+            <h2>TECHNOLOGY</h2>
+            <p>Leonard Lemke – Study Plus Mathem.-Tech. Softwaredeveloper</p>
+            <button class="lButton"><a href="">Hi</a></button>
+        </div>
+        <div class="grid__img--container">
+            <img id="grid__img" src="images/about/me5.jpg" alt="picture of me"/>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer-placeholder"></div>
+<script>
+    $.get("static/fragments/footer.html", function (data) {
+        $("#footer-placeholder").replaceWith(data);
+    });
+</script>
+</body>
+</html>

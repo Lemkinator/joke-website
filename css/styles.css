@@ -1,0 +1,481 @@
+@import url("navbar.css");
+@import url("footer.css");
+@import url("error.css");
+
+/* TODO
+    global background?
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #131313;
+    color: white;
+}
+
+/********************************************************
+  Basic Elements
+********************************************************/
+
+.lButton {
+    font-size: 1rem;
+    background: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.lButton a {
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+}
+
+.lButton:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #2d81b6;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.lButton:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    color: white;
+    cursor: pointer;
+}
+
+.lButton:hover:after {
+    color: white;
+    width: 100%;
+}
+
+.content__container {
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.content {
+    margin-bottom: 80px;
+    overflow-wrap: break-word;
+}
+
+.content h1 {
+    font-size: 3rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+    background-color: #ff8177;
+    background-image: linear-gradient(-20deg, #8d34e0 0%, #61c4ff 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    background-color: #ff8177;
+    background-image: linear-gradient(-20deg, #005215 0%, #a7ff63 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.content p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+    .content h2 {
+        font-size: 1.5rem;
+    }
+    .content h3 {
+        font-size: 1.3rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+.content li {
+    margin-top: 0.5rem;
+}
+
+p.small{
+    font-size: 0.8rem;
+}
+
+p.location {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+p.quote {
+    margin-bottom: 30px;
+}
+
+.lImg {
+    margin: 20px;
+    width: 80%;
+    max-width: 400px;
+}
+
+img.playstore_button {
+    width: 200px;
+    margin-top: 15px;
+}
+
+#app-icon {
+    width: 70%;
+    height: 70%;
+    border-radius: 80px;
+}
+
+.trailer{
+    width: 80vw;
+    height: 100vw;
+    max-width: 400px;
+    max-height: 500px;
+    border: none;
+    border-radius: 15px;
+}
+
+.video {
+    width: 80vw;
+    height: 45vw;
+    max-width: 900px;
+    max-height: 505px;
+    border: none;
+    border-radius: 15px;
+}
+
+.me-swiper {
+    width: 80%;
+    max-width: 400px;
+    display: inline-flex;
+}
+.me-swiper .swiper-slide {
+    margin-top: 40px;
+    padding-bottom: 27px;
+}
+
+.media-swiper {
+    width: 80vw;
+    height: 65vw;
+    max-width: 800px;
+    max-height: 650px;
+    display: inline-flex;
+}
+
+.impessions-swiper {
+    width: 80vw;
+    height: 65vw;
+    max-width: 800px;
+    max-height: 650px;
+}
+
+.mobile-swiper {
+    width: 80vw;
+    height: 140vw;
+    max-width: 400px;
+    max-height: 700px;
+    display: inline-flex;
+}
+
+.wear-swiper {
+    width: 80vw;
+    height: 70vw;
+    max-width: 400px;
+    max-height: 350px;
+    display: inline-flex;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.media-swiper .swiper-slide {
+    margin-top: 20px;
+    padding: 0 45px 145px;
+}
+
+.impressions-swiper .swiper-slide {
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.mobile-swiper .swiper-slide,
+.wear-swiper .swiper-slide {
+    margin-top: 20px;
+    padding: 0 50px 50px;
+}
+
+.swiper-slide .description {
+    margin: 5px 0 0;
+    max-width: 80vw;
+    font-size: 0.8rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: transparent;
+}
+
+/******************************************************************
+******************************************************************
+  Home
+******************************************************************
+*******************************************************************/
+
+.grid__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #131313;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.grid__content {
+    width: 100%;
+}
+
+.grid__img--container {
+    text-align: center;
+}
+
+#grid__img {
+    height: 80%;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.grid__content h1 {
+    font-size: 4rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.grid__content h2 {
+    font-size: 4rem;
+    margin-top: 10px;
+    background-color: #ff8177;
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.grid__content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .grid__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 140vh;
+    }
+
+    .grid__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .grid__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .grid__content h2 {
+        font-size: 2.3rem;
+    }
+
+    .grid__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .grid__content h2 {
+        font-size: 2rem;
+    }
+
+    .grid__content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .grid__content button {
+        margin: 1.5rem 0;
+    }
+}
+
+/********************************************************
+  Services
+********************************************************/
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.services h1 {
+    background-color: #ff8177;
+    background-image: linear-gradient(
+            to right,
+            #ff8177 0%,
+            #ff867a 0%,
+            #ff8c7f 21%,
+            #f99185 52%,
+            #cf556c 78%,
+            #b12a5b 100%
+    );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.services__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services__card {
+    margin: 1rem;
+    height: 525px;
+    width: 400px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.6) 100%);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.services__card:before {
+    opacity: 0.2;
+}
+
+.services__card:nth-child(1) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.6) 100%),
+    url('/images/apps/nakbuch/nakbuch_icon.jpg');
+}
+
+.services__card:nth-child(2) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 0.9) 100%),
+    url('/images/media/accelerate/accelerate1.jpg');
+}
+
+.services__card h2 {
+    position: absolute;
+    top: 350px;
+    left: 30px;
+    background: transparent;
+}
+
+.services__card p {
+    position: absolute;
+    top: 410px;
+    left: 30px;
+    background: transparent;
+}
+
+.services__card:hover {
+    transform: scale(1.075);
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+    .services {
+        height: 1600px;
+    }
+
+    .services h1 {
+        font-size: 2rem;
+        margin-top: 12rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services {
+        height: 1400px;
+    }
+
+    .services h1 {
+        font-size: 1.2rem;
+    }
+
+    .services__card {
+        width: 300px;
+    }
+}
